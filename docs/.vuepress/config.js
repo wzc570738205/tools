@@ -2,7 +2,7 @@
  * @Author: wangzhichiao<https://github.com/wzc570738205>
  * @Date: 2019-11-18 15:27:18
  * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
- * @LastEditTime: 2021-08-19 16:37:56
+ * @LastEditTime: 2021-08-19 17:24:35
  */
 /*
  * @Author: wangzhichiao<https://github.com/wzc570738205>
@@ -23,7 +23,6 @@ module.exports = {
     toc: { includeLevel: [1, 2, 3, 4] },
     extractHeaders: ["h1", "h2", "h3", "h4"],
   },
-  serviceWorker: true,
   themeConfig: {
     sidebarDepth: 2,
     logo: "/logo.png",
