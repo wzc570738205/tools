@@ -1,5 +1,5 @@
 
-![](https://gitee.com/Wzhichao/img/raw/master/uPic/6EZtuT00%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/6EZtuT00%20.png'></elimg>
 
 
 ## [jenkins介绍](https://jenkins.io/zh/)
@@ -18,7 +18,7 @@ jenkins的安装请移步[在linux服务器上安装Jenkins](https://www.cnblogs
 
 ## 新建github项目
 我们新建一个名为jenkins的git仓库，代码我这里选择了用[vue-cli](https://cli.vuejs.org/)简易生成了一个示例demo
-![](https://gitee.com/Wzhichao/img/raw/master/uPic/ByAMEO42%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/ByAMEO42%20.png'></elimg>
 
 ## github配置
 
@@ -29,9 +29,9 @@ jenkins的安装请移步[在linux服务器上安装Jenkins](https://www.cnblogs
 > 进入github --> setting --> Personal Access Token --> Generate new token
 [或者点击进入](https://github.com/settings/tokens/new)
 
-![img](https://gitee.com/Wzhichao/img/raw/master/uPic/IYOV3G06%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/IYOV3G06%20.png'></elimg>
 
-![img](https://gitee.com/Wzhichao/img/raw/master/uPic/xUqndM35%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/xUqndM35%20.png'></elimg>
 
 自己先保存此`token`，如果丢失，之后再也无法找到这个`token`。
 
@@ -41,7 +41,7 @@ jenkins的安装请移步[在linux服务器上安装Jenkins](https://www.cnblogs
 
 jenkins地址后加上```/github-webhook/```
 
-![img](https://gitee.com/Wzhichao/img/raw/master/uPic/QqqJoy08%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/QqqJoy08%20.png'></elimg>
 
 ## jenkins的github配置
 
@@ -51,7 +51,7 @@ jenkins地址后加上```/github-webhook/```
 
 直接安装Github Plugin, jenkins会自动帮你解决其他插件的依赖，直接安装该插件Jenkins会自动帮你安装plain-credentials 、[Git](http://lib.csdn.net/base/git) 、 credentials 、 github-api
 
-![img](https://gitee.com/Wzhichao/img/raw/master/uPic/436630-ff8c8744ed7ade0d15%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/436630-ff8c8744ed7ade0d15%20.png'></elimg>
 
 ### 配置GitHub Plugin
 
@@ -59,29 +59,29 @@ jenkins地址后加上```/github-webhook/```
 
 如下图所示
 
-![img](https://gitee.com/Wzhichao/img/raw/master/uPic/rzzEY431%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/rzzEY431%20.png'></elimg>
 
 API URL 输入 `https://api.github.com`，Credentials点击Add添加，Kind选择Secret Text,具体如下图所示。
 
-![img](https://gitee.com/Wzhichao/img/raw/master/uPic/5srXs406%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/5srXs406%20.png'></elimg>
 
 Secret添加刚才生成的token，id和描述随便填写
 
 设置完成后，点击`TestConnection`,提示`Credentials
  verified for user UUserName, rate limit: xxx`,则表明有效。
- ![](https://gitee.com/Wzhichao/img/raw/master/uPic/diNJuO28%20.png)
+ <elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/diNJuO28%20.png'></elimg>
 
  ### 创建一个freestyle任务
-![](https://gitee.com/Wzhichao/img/raw/master/uPic/uMDxQj41%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/uMDxQj41%20.png'></elimg>
 \- General 设置
 填写GitHub project URL, 也就是你的项目主页
 eg. `https://github.com/your_name/your_repo_name`
 
-![img](https://gitee.com/Wzhichao/img/raw/master/uPic/amghlB38%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/amghlB38%20.png'></elimg>
 
 \- 配置源码管理
 
-![img](https://gitee.com/Wzhichao/img/raw/master/uPic/ycegOY59%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/ycegOY59%20.png'></elimg>
 
 1. 填写项目的git地址, eg. `https://github.com/your_name/your_repo_name.git`
 2. 添加github用户和密码
@@ -89,9 +89,9 @@ eg. `https://github.com/your_name/your_repo_name`
 
 \- 构建触发器，构建环境
 
-![img](https://gitee.com/Wzhichao/img/raw/master/uPic/OaN2fB22%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/OaN2fB22%20.png'></elimg>
 
-![img](https://gitee.com/Wzhichao/img/raw/master/uPic/FYgxXC09%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/FYgxXC09%20.png'></elimg>
 
 >这里如果没有node，就需要安装下node
 因为Jenkins容器中只有java环境支持运行jenkins，没有node环境，但是jenkins提供在线安装nodejs。[官方文档](https://plugins.jenkins.io/nodejs)
@@ -102,22 +102,22 @@ eg. `https://github.com/your_name/your_repo_name`
 - 系统管理--->Global Tool Configuration--->选择需要安装的nodejs版本
 - 会从nodejs官网下载安装，nodejs安装包在：$JENKINS_HOME/tools目录下
 
-![](https://gitee.com/Wzhichao/img/raw/master/uPic/3611157-f781ebbe880aa77203%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/3611157-f781ebbe880aa77203%20.png'></elimg>
 
 \- 构建
 
-![](https://gitee.com/Wzhichao/img/raw/master/uPic/0kqlIQ16%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/0kqlIQ16%20.png'></elimg>
 
 \- 构建后操作
 
-![img](https://gitee.com/Wzhichao/img/raw/master/uPic/3Cz30U13%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/3Cz30U13%20.png'></elimg>
 
 最后点击保存即可
 
 ## 测试
 上传代码
 查看jenkins
-![](https://gitee.com/Wzhichao/img/raw/master/uPic/MrUocw40%20.png)
+<elimg url='https://gitee.com/Wzhichao/img/raw/master/uPic/MrUocw40%20.png'></elimg>
 这样就成功了，每次提交代码到master就会进行自动构建测试代码有没有问题
 
 下一篇我们介绍如何添加钉钉机器人提示提交信息

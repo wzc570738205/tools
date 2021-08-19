@@ -1,4 +1,4 @@
-![image.png](https://picsum.photos/790/338)
+<elimg url='https://picsum.photos/790/338'></elimg>
 # 什么是前端自动化
 
 前端自动化不是指自动生成代码，而是自动化构建项目。
@@ -34,7 +34,7 @@
 [![fomAnf.gif](https://z3.ax1x.com/2021/08/18/fomAnf.gif)](https://imgtu.com/i/fomAnf)
 # 实现
 ## 流程图
-![image.png](https://image-static.segmentfault.com/408/537/4085375129-611b7032deeb1_fix732)
+<elimg url='https://image-static.segmentfault.com/408/537/4085375129-611b7032deeb1_fix732'></elimg>
 - 开发人员提交代码至代码库
 - 触发jenki构建任务
 - 构建成功，发包至nginx服务器，更新完毕
@@ -49,14 +49,14 @@
 ## 2.接入代码提交通知
 当你在往代码库推送了代码，通过git的webhook自动给钉钉发送消息
 ### 2.1添加钉钉群机器人(智能群助手)
-![image.png](https://image-static.segmentfault.com/295/835/295835230-611b877b09a2b_fix732)
+<elimg url='https://image-static.segmentfault.com/295/835/295835230-611b877b09a2b_fix732'></elimg>
 复制webhook，接下来会用到
-![image.png](https://image-static.segmentfault.com/857/347/857347958-611b87c71b308_fix732)
+<elimg url='https://image-static.segmentfault.com/857/347/857347958-611b87c71b308_fix732'></elimg>
 ### 2.2将钉钉webhook添加至github对应相应的webhook里
-![image.png](https://image-static.segmentfault.com/212/509/2125091110-611b885c66290_fix732)
+<elimg url='https://image-static.segmentfault.com/212/509/2125091110-611b885c66290_fix732'></elimg>
 ### 2.3 测试代码提交通知
 配置完成，我们提交下代码进行测试
-![image.png](https://image-static.segmentfault.com/375/787/3757871948-611b888aef2bb_fix732)
+<elimg url='https://image-static.segmentfault.com/375/787/3757871948-611b888aef2bb_fix732'></elimg>
 **至此，代码提交通知配置完成**
 ## 3.接入项目CI
 当我们提交完代码后，我们需要校验下此次代码合并有没有致命性错误，这里我们采取简单的方法即允许`npm run build`，如果运行没有报错，那么说明此次提交是通过的。失败则说明代码有致命错误，需要进行修改
@@ -65,43 +65,43 @@
 - 创建一个`构建一个自由风格的软件项目`的job
 - 源码管理器选择git,并填入地址以及凭证(没有就新建一个）
 - 构建触发器选择:GitHub hook trigger for GITScm polling
- ![image.png](https://image-static.segmentfault.com/490/309/490309930-611b8c425b3c9_fix732)
+ <elimg url='https://image-static.segmentfault.com/490/309/490309930-611b8c425b3c9_fix732'></elimg>
 - 添加node环境：系统管理/全局工具配置-新增nodejs，版本选择合适的即可
- ![image.png](https://image-static.segmentfault.com/145/764/1457642595-611b8c1b3fb82_fix732)
+ <elimg url='https://image-static.segmentfault.com/145/764/1457642595-611b8c1b3fb82_fix732'></elimg>
 - 构建环境选择node，勾选刚才下载的node
 - 构建选择`执行shell`:
-  ```
+  ```sh
   npm install -g cnpm --registry=https://registry.npm.taobao.org&&
   cnpm install&&
   npm run build
   ```
-  ![image.png](https://image-static.segmentfault.com/124/251/1242515974-611b8ca4590b0_fix732)
+  <elimg url='https://image-static.segmentfault.com/124/251/1242515974-611b8ca4590b0_fix732'></elimg>
 - 构建后操作(可选)：
-  ![image.png](https://image-static.segmentfault.com/318/223/3182238635-611b8d0d2be99_fix732)
+  <elimg url='https://image-static.segmentfault.com/318/223/3182238635-611b8d0d2be99_fix732'></elimg>
   
 我们通过`jenkins`job的执行成功与失败来确定CI是否成功
 #### 3.1.1 测试
 再次提交代码,成功触发jenkins的job
-![image.png](https://image-static.segmentfault.com/305/940/3059406415-611b8fa47f2bf_fix732)
+<elimg url='https://image-static.segmentfault.com/305/940/3059406415-611b8fa47f2bf_fix732'></elimg>
 构建成功
-![image.png](https://image-static.segmentfault.com/924/406/924406704-611c793369447_fix732)
+<elimg url='https://image-static.segmentfault.com/924/406/924406704-611c793369447_fix732'></elimg>
 ### 3.2 接入构建状态钉钉通知
 - 配置钉钉自定义机器人，并选择安全设置自定义关键词，这里设置`#`即可
-  ![image.png](https://image-static.segmentfault.com/186/296/1862962580-611c79cd4b200_fix732)
+  <elimg url='https://image-static.segmentfault.com/186/296/1862962580-611c79cd4b200_fix732'></elimg>
 - 下载jenkins插件`DingTalk`，用来进行钉钉通知  
- ![image.png](https://image-static.segmentfault.com/414/382/4143825518-611c7a1838823_fix732) 
+ <elimg url='https://image-static.segmentfault.com/414/382/4143825518-611c7a1838823_fix732'></elimg>
 - 配置插件=>系统管理选择钉钉,填入刚才的自定义机器人webhook地址
-  ![image.png](https://image-static.segmentfault.com/378/751/3787517806-611c7a83a3f7e_fix732) 
-  ![image.png](https://image-static.segmentfault.com/412/321/4123219789-611c8d0b6f36b_fix732)
+  <elimg url='https://image-static.segmentfault.com/378/751/3787517806-611c7a83a3f7e_fix732'></elimg>
+  <elimg url='https://image-static.segmentfault.com/412/321/4123219789-611c8d0b6f36b_fix732'></elimg>
 - 项目里开启机器人通知
-  ![image.png](https://image-static.segmentfault.com/331/910/3319101675-611c7af644e26_fix732)  
+  <elimg url='https://image-static.segmentfault.com/331/910/3319101675-611c7af644e26_fix732 '></elimg>
 - 点击开始构建，进行测试
   
-  ![image.png](https://image-static.segmentfault.com/317/061/3170616769-611c7be883f8f_fix732)
+  <elimg url='https://image-static.segmentfault.com/317/061/3170616769-611c7be883f8f_fix732'></elimg>
   等待CI结束
-  ![image.png](https://image-static.segmentfault.com/214/047/2140470404-611c7bf000390_fix732)
+  <elimg url='https://image-static.segmentfault.com/214/047/2140470404-611c7bf000390_fix732'></elimg>
   失败提醒
-  ![image.png](https://image-static.segmentfault.com/194/278/1942784134-611c7c2b2bd83_fix732)
+  <elimg url='https://image-static.segmentfault.com/194/278/1942784134-611c7c2b2bd83_fix732'></elimg>
   
 **至此，CI配置结束，我们实现了代码提交钉钉提醒，以及CI通知提醒**
 ## 4.接入CD
@@ -109,13 +109,13 @@
 ### 4.1 发包至服务器
 - 安装jenkins插件`Publish Over SSH`
 - 设置里配置插件,填入服务器ip，高级里使用密码，设置远程服务器文件夹`/`
-  ![image.png](https://image-static.segmentfault.com/387/202/3872020142-611c7dc34ad8f_fix732)
+  <elimg url='https://image-static.segmentfault.com/387/202/3872020142-611c7dc34ad8f_fix732'></elimg>
   点击测试连通性
-  ![image.png](https://image-static.segmentfault.com/226/712/2267128736-611c7d8b5c488_fix732)
+  <elimg url='https://image-static.segmentfault.com/226/712/2267128736-611c7d8b5c488_fix732'></elimg>
 
 - 项目配置
 - 修改构建shell，添加压缩
-```
+```sh
 npm install -g cnpm --registry=https://registry.npm.taobao.org&&
 cnpm install&&
 rm -rf dist&&
@@ -124,9 +124,9 @@ cd ./dist&&
 tar -zcvf dist.tar.gz *
 ```
 - 添加构建后操作`Send build artifacts over SSH`
-  ![image.png](https://image-static.segmentfault.com/145/246/145246172-611c7efa52f06_fix732)
+  <elimg url='https://image-static.segmentfault.com/145/246/145246172-611c7efa52f06_fix732'></elimg>
 - 服务器配置`nginx`  
-```
+```sh
 location /testPage{
    alias     /home/test;
    index     index.html;

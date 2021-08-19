@@ -2,7 +2,7 @@
  * @Author: wangzhichiao<https://github.com/wzc570738205>
  * @Date: 2021-03-04 10:53:40
  * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
- * @LastEditTime: 2021-08-19 13:33:34
+ * @LastEditTime: 2021-08-19 15:14:38
 -->
 <template>
   <div class="templates-wrapper" style="background:#eff5fe">
@@ -71,7 +71,7 @@ export default {
     //   this.$router.push({
     //     path: '/pages/介绍.html',
     //   })
-      window.location.href='/tools/pages/介绍.html'
+      window.location.href='/tools/pages/aboutme.html'
     }
   }
 }
