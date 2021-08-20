@@ -2,7 +2,7 @@
  * @Author: wangzhichiao<https://github.com/wzc570738205>
  * @Date: 2019-11-18 15:27:18
  * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
- * @LastEditTime: 2021-08-19 17:24:35
+ * @LastEditTime: 2021-08-20 09:26:17
  */
 /*
  * @Author: wangzhichiao<https://github.com/wzc570738205>
@@ -29,14 +29,6 @@ module.exports = {
     lastUpdated: "lastUpdate", // string | boolean
     nav: [
       { text: "首页", link: "/" },
-      {
-        text: "分类",
-        ariaLabel: "分类",
-        items: [
-          { text: "前端手册", link: "/pages/index/脚手架/前端手册.md" },
-          { text: "后端手册", link: "/pages/index/脚手架/后端手册.md" },
-        ],
-      },
       { text: "segmentfault", link: "https://segmentfault.com/u/wangzc996" },
       { text: "github", link: "https://github.com/wzc570738205" },
     ],
@@ -65,8 +57,8 @@ module.exports = {
             ["/pages/css/gridBackground.md", "用css实现背景线网格"],
             ["/pages/css/disableHover.md", "如何禁用css hover"],
             ["/pages/css/textHidden.md", "html单行、多行文本溢出隐藏"],
-            
-          ],
+            ["/pages/css/border.md", "实现一个带脚边的边框"],
+          ]
         },
         {
           title: "jenkins", // 必要的
@@ -79,8 +71,26 @@ module.exports = {
             ["/pages/jenkins/buildGit.md", "使用jenkins自动构建github项目"],
             ["/pages/jenkins/svnDing.md", "svn实现钉钉代码提交通知"],
             ["/pages/jenkins/cicd.md", "[Jenkins进阶]-前端CI/CD"],
-            
-          ],
+          ]
+        },
+        {
+          title: "nginx", // 必要的
+          collapsable: true, // 可选的, 默认值是 true,
+          sidebarDepth: 1,
+          children: [
+            ["/pages/nginx/install.md", "如何在Centos 7上安装和管理Nginx"],
+            ["/pages/nginx/expires.md", "nginx缓存的开启和禁用"],
+            ["/pages/nginx/gzip.md", "nginx开启gzip"],
+          ]
+        },
+        {
+          title: "vue", // 必要的
+          collapsable: true, // 可选的, 默认值是 true,
+          sidebarDepth: 1,
+          children: [
+            ["/pages/vue/removelog.md", "打包去除生产环境console.log"],
+            ["/pages/vue/gzip.md", "vue打包开启gzip"],
+          ]
         },
       ],
       // '/pages/index/': [

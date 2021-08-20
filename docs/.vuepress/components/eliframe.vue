@@ -3,7 +3,7 @@
  * @Author: wangzhichiao<https://github.com/wzc570738205>
  * @Date: 2021-08-19 16:54:21
  * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
- * @LastEditTime: 2021-08-19 16:55:31
+ * @LastEditTime: 2021-08-19 17:40:06
 -->
 <!--
  * @FileDescription: 
@@ -13,7 +13,7 @@
  * @LastEditTime: 2021-08-19 16:43:46
 -->
 <template>
-  <iframe :src="src" frameborder="0"></iframe>
+  <iframe :src="url" frameborder="0" ></iframe>
 </template>
 
 <script>
@@ -21,7 +21,7 @@ export default {
   name: "",
   components: {},
   props: {
-      src:''
+      url:''
   },
   data() {
     return {
@@ -33,4 +33,13 @@ export default {
   methods: {},
 };
 </script>
+<style scoped>
+iframe {
+  width: 100%;
+  height: 600px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+</style>
+
 
