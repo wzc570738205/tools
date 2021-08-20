@@ -2,7 +2,7 @@
  * @Author: wangzhichiao<https://github.com/wzc570738205>
  * @Date: 2021-03-04 10:53:40
  * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
- * @LastEditTime: 2021-08-19 15:14:38
+ * @LastEditTime: 2021-08-20 09:52:29
 -->
 <template>
   <div class="templates-wrapper" style="background:#eff5fe">
@@ -14,7 +14,7 @@
             class="banner5-title"
             style="opacity: 1; transform: translate(0px, 0px);"
           >
-            <span>知识手册</span>
+            <span>杂货屋</span>
           </h1>
           <div
             name="explain"
