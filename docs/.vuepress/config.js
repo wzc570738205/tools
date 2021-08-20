@@ -2,7 +2,7 @@
  * @Author: wangzhichiao<https://github.com/wzc570738205>
  * @Date: 2019-11-18 15:27:18
  * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
- * @LastEditTime: 2021-08-20 09:52:12
+ * @LastEditTime: 2021-08-20 10:16:22
  */
 /*
  * @Author: wangzhichiao<https://github.com/wzc570738205>
@@ -50,6 +50,8 @@ module.exports = {
             ["/pages/css/textHidden.md", "html单行、多行文本溢出隐藏"],
             ["/pages/css/border.md", "实现一个带脚边的边框"],
             ["/pages/css/gradientprogressbar.md", "css渐变进度条"],
+            ["/pages/css/trapezoid.md", "css实现梯形分割"],
+            ["/pages/css/svgtext.md", "css实现炫酷字体"],
           ],
         },
         {
