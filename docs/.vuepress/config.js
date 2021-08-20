@@ -2,7 +2,7 @@
  * @Author: wangzhichiao<https://github.com/wzc570738205>
  * @Date: 2019-11-18 15:27:18
  * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
- * @LastEditTime: 2021-08-20 09:26:17
+ * @LastEditTime: 2021-08-20 09:38:17
  */
 /*
  * @Author: wangzhichiao<https://github.com/wzc570738205>
@@ -58,6 +58,7 @@ module.exports = {
             ["/pages/css/disableHover.md", "如何禁用css hover"],
             ["/pages/css/textHidden.md", "html单行、多行文本溢出隐藏"],
             ["/pages/css/border.md", "实现一个带脚边的边框"],
+            ["/pages/css/gradientprogressbar.md", "css渐变进度条"],
           ]
         },
         {
